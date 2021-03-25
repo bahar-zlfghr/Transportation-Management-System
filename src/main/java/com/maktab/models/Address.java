@@ -8,11 +8,11 @@ public class Address {
     @Column(name = "Id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-    @Column(name = "Province")
+    @Column(name = "Province", nullable = false, length = 25)
     private String province;
-    @Column(name = "City")
+    @Column(name = "City", nullable = false, length = 25)
     private String city;
-    @Column(name = "Continuation Address")
+    @Column(name = "ContinuationAddress")
     private String continuationAddress;
 
     public Address() {
