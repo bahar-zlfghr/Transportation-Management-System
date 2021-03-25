@@ -8,7 +8,7 @@ import javax.persistence.*;
 @Entity
 public class PostOrder implements CalculatePostPrice {
     @Id
-    @Column(name = "SerialNumber")
+    @Column(name = "SerialNumber", length = 5)
     private int serialNumber;
     @OneToOne
     @JoinColumn(name = "Origin_Id")
