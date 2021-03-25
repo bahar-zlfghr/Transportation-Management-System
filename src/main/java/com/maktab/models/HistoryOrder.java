@@ -11,15 +11,16 @@ public class HistoryOrder {
     @Column(name = "Id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-    @Column(name = "Date")
+    @Column(name = "Date", nullable = false)
     private Timestamp date;
-    @Column(name = "Order Status")
+    @Column(name = "Order_Status", nullable = false)
+    @Enumerated(EnumType.STRING)
     private OrderStatus orderStatus;
-    @Column(name = "Order Serial Number")
+    @Column(name = "Order_SerialNumber", nullable = false, length = 5)
     private String serialNumber;
-    @Column(name = "Clerk First Name")
+    @Column(name = "Clerk_FirstName", nullable = false, length = 15)
     private String clerkFirstName;
-    @Column(name = "Clerk Last Name")
+    @Column(name = "Clerk_LastName", nullable = false, length = 25)
     private String clerkLastName;
     @Column(name = "Comment")
     private String comment;
