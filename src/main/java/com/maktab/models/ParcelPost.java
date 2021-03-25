@@ -8,15 +8,15 @@ public class ParcelPost {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "Id")
     private int id;
-    @Column(name = "Weight")
+    @Column(name = "Weight", nullable = false)
     private double weight;
-    @Column(name = "Content")
+    @Column(name = "Content", nullable = false)
     private String content;
-    @Column(name = "Length")
+    @Column(name = "Length", nullable = false)
     private double length;
-    @Column(name = "Width")
+    @Column(name = "Width", nullable = false)
     private double width;
-    @Column(name = "Height")
+    @Column(name = "Height", nullable = false)
     private double height;
 
     public ParcelPost() {
