@@ -8,11 +8,11 @@ public class Recipient {
     @Column(name = "Id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-    @Column(name = "First Name")
+    @Column(name = "FirstName", nullable = false, length = 15)
     private String firstName;
-    @Column(name = "Last Name")
+    @Column(name = "LastName", nullable = false , length = 25)
     private String lastName;
-    @Column(name = "Phone")
+    @Column(name = "Phone", nullable = false, length = 11)
     private String phone;
 
     public Recipient() {
