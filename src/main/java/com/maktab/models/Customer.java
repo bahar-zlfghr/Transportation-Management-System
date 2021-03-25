@@ -10,7 +10,7 @@ public class Customer extends User {
     @Column(name = "Phone", length = 11)
     private String phone;
     @OneToOne
-    @JoinColumn(name = "Address Id")
+    @JoinColumn(name = "Address_Id")
     private Address address;
 
     public Customer() {
