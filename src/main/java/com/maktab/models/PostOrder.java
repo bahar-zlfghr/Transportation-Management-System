@@ -30,7 +30,7 @@ public class PostOrder implements CalculatePostPrice {
     private OrderStatus status;
     @Column(name = "Price", nullable = false)
     private double price;
-    @Column(name = "DeliverTime", nullable = false)
+    @Column(name = "DeliverTime", nullable = false, length = 1)
     private int deliverTime;
 
     public PostOrder() {
