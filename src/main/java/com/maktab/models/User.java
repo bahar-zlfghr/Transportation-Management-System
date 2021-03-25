@@ -10,13 +10,13 @@ import javax.persistence.*;
 @DiscriminatorValue(value="User")
 public class User {
     @Id
-    @Column(name = "Username")
+    @Column(name = "Username", length = 25)
     private String username;
     @Column(name = "Password", nullable = false)
     private String password;
-    @Column(name = "First Name", length = 15)
+    @Column(name = "FirstName", nullable = false, length = 15)
     private String firstName;
-    @Column(name = "Last Name", length = 25)
+    @Column(name = "LastName", nullable = false, length = 25)
     private String lastName;
 
     public User() {
