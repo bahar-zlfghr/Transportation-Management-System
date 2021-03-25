@@ -6,37 +6,37 @@ import com.maktab.enums.TransportType;
 import javax.persistence.*;
 
 @Entity
-public class Order implements CalculatePostPrice {
+public class PostOrder implements CalculatePostPrice {
     @Id
-    @Column(name = "Serial Number")
+    @Column(name = "SerialNumber")
     private int serialNumber;
     @OneToOne
-    @JoinColumn(name = "Origin Id")
+    @JoinColumn(name = "Origin_Id")
     private Address originAddress;
     @OneToOne
-    @JoinColumn(name = "Destination Id")
+    @JoinColumn(name = "Destination_Id")
     private Address destinationAddress;
     @OneToOne
-    @JoinColumn(name = "Recipient Id")
+    @JoinColumn(name = "Recipient_Id")
     private Recipient recipient;
-    @Column(name = "Transport Type")
+    @Column(name = "TransportType", nullable = false)
     @Enumerated(EnumType.STRING)
     private TransportType transportType;
     @OneToOne
-    @JoinColumn(name = "ParcelPost Id")
+    @JoinColumn(name = "ParcelPost_Id")
     private ParcelPost parcelPost;
-    @Column(name = "Order Status")
+    @Column(name = "Order_Status", nullable = false)
     @Enumerated(EnumType.STRING)
     private OrderStatus status;
-    @Column(name = "Price")
+    @Column(name = "Price", nullable = false)
     private double price;
-    @Column(name = "Deliver Time")
+    @Column(name = "DeliverTime", nullable = false)
     private int deliverTime;
 
-    public Order() {
+    public PostOrder() {
     }
 
-    public Order(int serialNumber, Address originAddress, Address destinationAddress, Recipient recipient, TransportType transportType, ParcelPost parcelPost, OrderStatus status) {
+    public PostOrder(int serialNumber, Address originAddress, Address destinationAddress, Recipient recipient, TransportType transportType, ParcelPost parcelPost, OrderStatus status) {
         this.serialNumber = serialNumber;
         this.originAddress = originAddress;
         this.destinationAddress = destinationAddress;
