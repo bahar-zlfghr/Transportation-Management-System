@@ -1,0 +1,76 @@
+body {
+    font-family: "Lucida Console", "Courier New", monospace;
+    background-color: #EEE2DC;
+    height: auto;
+    margin: 0;
+}
+
+.header {
+    background: #123C69;
+    text-align: center;
+    color: #EEEEEE;
+    position: fixed;
+    padding: 10px;
+    width: 100%;
+    top: 0;
+    left: 0
+}
+
+.navbar {
+    overflow: hidden;
+    background-color: #AC3B61;
+    margin-top: 36px;
+    width: 100%;
+}
+
+.navbar a {
+    float: left;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none
+}
+
+.subnav {
+    float: left;
+    overflow: hidden;
+}
+
+.subnav .subnavbtn {
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+}
+
+.navbar a:hover, .subnav:hover .subnavbtn {
+    background-color: #EDC7B7;
+}
+
+.subnav-content {
+    display: none;
+    position: absolute;
+    left: 0;
+    background-color: #EDC7B7;
+    width: 100%;
+}
+
+.subnav-content a {
+    float: left;
+    color: white;
+    text-decoration: none;
+}
+
+.subnav-content a:hover {
+    background-color: #BAB2B5;
+    color: #123C69;
+}
+
+.subnav:hover .subnav-content {
+    display: block;
+}
