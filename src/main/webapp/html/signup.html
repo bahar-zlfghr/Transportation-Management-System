@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="../css/signup.css">
+    <script src="../js/signup.js"></script>
+</head>
+
+<body>
+<div>
+    <h3># Please complete the form below </h3>
+</div>
+
+<div class="header">
+    Transportation Management System
+</div>
+
+<div class="form-group">
+    <!-- edit action -->
+    <form class="form" name="signinForm" method="post" onsubmit="return validateSigninForm()">
+        <label>User name
+        <input type="text" name="username" placeholder="Enter your username">
+        </label><br>
+        <span id="empty-error-username"></span>
+        <span id="duplicate-error-username"></span>
+
+        <br>
+        <br>
+
+        <label>Password
+        <input type="password" name="password" placeholder="Enter your password">
+        </label><br>
+        <span id="error-password"></span>
+
+        <br>
+        <br>
+
+        <label>First name
+        <input type="text" name="firstName" placeholder="Enter your first name">
+        </label><br>
+        <span id="error-firstName"></span>
+
+        <br>
+        <br>
+
+        <label>Last name
+        <input type="text" name="lastName" placeholder="Enter your last name">
+        </label><br>
+        <span id="error-lastName"></span>
+
+        <br>
+        <br>
+
+        <label>Email
+        <input type="text" name="email" placeholder="Enter your email">
+        </label><br>
+        <span id="error-email"></span>
+
+        <br>
+        <br>
+
+        <label>Phone
+        <input type="text" name="phone" placeholder="Enter your phone">
+        </label><br>
+        <span id="error-phone"></span>
+
+        <br>
+        <br>
+
+        <label>Province
+        <select name="province" id="province" onchange="changeProvinceCities()">
+            <option value="">Select province </option>
+            <option value="alborz">Alborz </option>
+            <option value="tehran">Tehran </option>
+            <option value="kermanshah">Kermanshah </option>
+        </select>
+        </label><br>
+        <span id="error-province"></span>
+
+        <br>
+        <br>
+
+        <label>City
+        <select name="city" id="city">
+            <option>Please select province first</option>
+        </select>
+        </label>
+
+        <br>
+        <br>
+
+        <input type="submit" value="Signup">
+    </form>
+</div>
+
+<div class="login">
+    <p>Already have account? <a href="login.html">Login </a></p>
+</div>
+</body>
+</html>
