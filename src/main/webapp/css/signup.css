@@ -1,0 +1,64 @@
+body {
+    font-family: "Lucida Console", "Courier New", monospace;
+    background-color: #EEE2DC;
+    height: auto;
+    margin: 0;
+}
+
+.header {
+    background: #123C69;
+    text-align: center;
+    color: #EEEEEE;
+    position: fixed;
+    padding: 10px;
+    width: 100%;
+    top: 0;
+    left: 0
+}
+
+h3 {
+    margin: 50px auto auto auto;
+    width: 80%;
+}
+
+.form-group {
+    background-color: #EDC7B7;
+    width: 80%;
+    margin: 30px auto auto auto;
+    padding: 20px;
+}
+
+#empty-error-username, #duplicate-error-username,
+#error-password, #error-firstName, #error-lastName,
+#error-email, #error-phone, #error-province {
+    font-size: 13px;
+    color: red;
+}
+
+input, select {
+    font-family: "Lucida Console", "Courier New", monospace;
+    font-size: 15px;
+    padding: 10px;
+}
+
+.login {
+    background-color: #AC3B61;
+    width: 80%;
+    margin: 30px auto auto auto;
+    padding: 20px;
+}
+
+p {
+    color: white;
+}
+
+a {
+    text-decoration: none;
+    color: #123C69;
+}
+
+.login a:hover {
+    background-color: #EDC7B7;
+    color: #AC3B61;
+    padding: 10px;
+}
