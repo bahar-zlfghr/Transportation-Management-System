@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
     <title>Sign Up</title>
-    <link rel="stylesheet" href="../css/signup.css">
-    <script src="../js/signup.js"></script>
+    <link rel="stylesheet" href="css/signup.css">
+    <script src="js/signup.js"></script>
 </head>
 
 <body>
@@ -17,7 +17,7 @@
 
 <div class="form-group">
     <!-- edit action -->
-    <form class="form" name="signupForm" method="post" onsubmit="return validateSignupForm()">
+    <form class="form" name="signupForm" action="signupServlet" method="post" onsubmit="return validateSignupForm()">
         <label>User name
         <input type="text" name="username" placeholder="Enter your username">
         </label><br>
@@ -55,6 +55,7 @@
         <input type="text" name="email" placeholder="Enter your email">
         </label><br>
         <span id="error-email"></span>
+        <span id="duplicate-error-email"></span>
 
         <br>
         <br>
