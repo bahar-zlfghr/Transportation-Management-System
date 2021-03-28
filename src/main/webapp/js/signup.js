@@ -1,14 +1,14 @@
-function validateSigninForm() {
-    var username = document.forms["signinForm"]["username"].value,
-        password = document.forms["signinForm"]["password"].value,
-        firstName = document.forms["signinForm"]["firstName"].value,
-        lastName = document.forms["signinForm"]["lastName"].value,
-        email = document.forms["signinForm"]["email"].value,
-        phone = document.forms["signinForm"]["phone"].value,
-        province = document.forms["signinForm"]["province"].value,
+function validatesignupForm() {
+    var username = document.forms["signupForm"]["username"].value,
+        password = document.forms["signupForm"]["password"].value,
+        firstName = document.forms["signupForm"]["firstName"].value,
+        lastName = document.forms["signupForm"]["lastName"].value,
+        email = document.forms["signupForm"]["email"].value,
+        phone = document.forms["signupForm"]["phone"].value,
+        province = document.forms["signupForm"]["province"].value,
         continuationAddress = document.getElementById("continuationAddress").value;
 
-    // var city = document.forms["signinForm"]["city"].value;
+    // var city = document.forms["signupForm"]["city"].value;
     // console.log(province + " " + provincesAndCities[province][city]);
 
     if(!validateUsername(username)){
