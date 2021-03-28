@@ -5,7 +5,8 @@ function validateSigninForm() {
         lastName = document.forms["signinForm"]["lastName"].value,
         email = document.forms["signinForm"]["email"].value,
         phone = document.forms["signinForm"]["phone"].value,
-        province = document.forms["signinForm"]["province"].value;
+        province = document.forms["signinForm"]["province"].value,
+        continuationAddress = document.getElementById("continuationAddress").value;
 
     // var city = document.forms["signinForm"]["city"].value;
     // console.log(province + " " + provincesAndCities[province][city]);
@@ -59,14 +60,22 @@ function validateSigninForm() {
         document.getElementById('error-province').innerHTML = "";
     }
 
-    if(!validateUsername(username) || !validatePassword(password) || !validateName(firstName) || !validateName(lastName) || !validatePhone(phone) || !validateEmail(email) || !validateProvince(province)) {
+    if (!validationContinuationAddress(continuationAddress)) {
+        document.getElementById('error-continuationAddress').innerHTML = " * Continuation address must not be empty";
+    }
+    else {
+        document.getElementById('error-continuationAddress').innerHTML = "";
+    }
+
+    if(!validateUsername(username) || !validatePassword(password) || !validateName(firstName) ||
+        !validateName(lastName) || !validatePhone(phone) || !validateEmail(email) ||
+        !validateProvince(province) || !validationContinuationAddress(continuationAddress)) {
         return false;
     }
 }
 
 function validateUsername(username) {
     return JSON.stringify(username).length - 2 > 0;
-
 }
 
 function validatePassword(password) {
@@ -96,6 +105,10 @@ function validateEmail(email) {
 function validateProvince(province) {
     return province.length > 0;
 
+}
+
+function validationContinuationAddress(continuationAddress) {
+    return JSON.stringify(continuationAddress).length - 2 > 0;
 }
 
 function changeProvinceCities() {
