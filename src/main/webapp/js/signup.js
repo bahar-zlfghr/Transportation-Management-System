@@ -1,4 +1,4 @@
-function validatesignupForm() {
+function validateSignupForm() {
     var username = document.forms["signupForm"]["username"].value,
         password = document.forms["signupForm"]["password"].value,
         firstName = document.forms["signupForm"]["firstName"].value,
