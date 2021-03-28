@@ -4,6 +4,6 @@
     <title>Start</title>
 </head>
 <body>
-    <a href="html/home.html">Go!</a>
+    <a href="home.html">Go!</a>
 </body>
 </html>
