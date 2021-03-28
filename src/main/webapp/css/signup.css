@@ -30,7 +30,7 @@ h3 {
 
 #empty-error-username, #duplicate-error-username,
 #error-password, #error-firstName, #error-lastName,
-#error-email, #error-phone, #error-province {
+#error-email, #error-phone, #error-province, #error-continuationAddress {
     font-size: 13px;
     color: red;
 }
