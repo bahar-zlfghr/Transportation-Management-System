@@ -17,12 +17,11 @@
 
 <div class="form-group">
     <!-- edit action -->
-    <form class="form" name="loginForm" method="post" onsubmit="return validateLoginForm()">
+    <form class="form" name="loginForm" action="loginServlet" method="post" onsubmit="return validateLoginForm()">
         <label>User name
         <input type="text" name="username" placeholder="Enter your username">
         </label><br>
         <span id="empty-error-username"></span>
-        <span id="duplicate-error-username"></span>
 
         <br>
         <br>
@@ -31,6 +30,8 @@
         <input type="password" name="password" placeholder="Enter your password">
         </label><br>
         <span id="error-password"></span>
+        <br>
+        <span id="incorrect-username-or-password"></span>
 
         <br>
         <br>
