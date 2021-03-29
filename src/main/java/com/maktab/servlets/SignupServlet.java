@@ -57,7 +57,11 @@ public class SignupServlet extends HttpServlet {
         customerDao.saveCustomer(customer);
 
         System.out.println(" # Welcome");
-        //ToDo -> welcome and new post
+
+        request.getRequestDispatcher("customer_menu.html").include(request, response);
+        writer.println("<script>");
+        writer.println("document.getElementById('welcome-message').innerHTML = \" Welcome " + firstName + " " + lastName + "\";");
+        writer.println("</script>");
 
         writer.close();
     }
