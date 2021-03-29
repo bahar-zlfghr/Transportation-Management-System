@@ -29,7 +29,7 @@ h3 {
     padding: 20px;
 }
 
-#empty-error-username, #duplicate-error-username,
+#empty-error-username, #incorrect-username-or-password,
 #error-password {
     font-size: 13px;
     color: red;
