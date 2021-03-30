@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>New Delivery</title>
+    <link rel="stylesheet" href="css/new_delivery.css">
+    <script src="js/new_delivery.js"></script>
+    <script src="js/get_price.js"></script>
+</head>
+<body>
+<div class="header">
+    Transportation Management System
+</div>
+
+
+
+<div>
+    <h3># Please complete the form below </h3>
+</div>
+
+<div class="form-group">
+<!--    edit action form-->
+    <form class="form" name="newDeliveryForm" action="newDeliveryServlet" method="post" onsubmit="return validateNewDeliveryForm()">
+<!--        origin -->
+        <label> Origin address:
+            <br>
+            <br>
+            Province
+            <select name="originProvince" id="originProvince" onchange="changeOriginProvinceCities()">
+                <option value="">Select province </option>
+                <option value="alborz">Alborz </option>
+                <option value="tehran">Tehran </option>
+                <option value="kermanshah">Kermanshah </option>
+            </select>
+        </label><br>
+        <span id="error-origin-province"></span>
+
+        <br>
+        <br>
+
+        <label>City
+            <select name="originCity" id="originCity">
+                <option>Please select province first</option>
+            </select>
+        </label>
+
+        <br>
+        <br>
+
+        <label> Continuation address
+
+            <br>
+            <br>
+
+            <textarea rows="4" cols="50" id="originContinuationAddress" name="originContinuationAddress" placeholder="Enter your continuation address"></textarea>
+        </label><br>
+        <span id="error-origin-continuationAddress"></span>
+
+        <br>
+        <br>
+
+<!--        destination -->
+        <label> Destination address:
+            <br>
+            <br>
+            Province
+            <select name="destinationProvince" id="destinationProvince" onchange="changeDestinationProvinceCities()">
+                <option value="">Select province </option>
+                <option value="alborz">Alborz </option>
+                <option value="tehran">Tehran </option>
+                <option value="kermanshah">Kermanshah </option>
+            </select>
+        </label><br>
+        <span id="error-destination-province"></span>
+
+        <br>
+        <br>
+
+        <label>City
+            <select name="destinationCity" id="destinationCity">
+                <option>Please select province first</option>
+            </select>
+        </label>
+
+        <br>
+        <br>
+
+        <label> Continuation address
+
+            <br>
+            <br>
+
+            <textarea rows="4" cols="50" id="destinationContinuationAddress" name="originContinuationAddress" placeholder="Enter your continuation address"></textarea>
+        </label><br>
+        <span id="error-destination-continuationAddress"></span>
+
+        <br>
+        <br>
+
+<!--       recipient first name -->
+        <label> Recipient first name
+            <input type="text" name="recipientFirstName" id="recipientFirstName" placeholder="Enter recipient first name">
+        </label><br>
+        <span id="error-recipient-firstName"></span>
+
+        <br>
+        <br>
+
+<!--        recipient last name -->
+        <label> Recipient last name
+            <input type="text" name="recipientLastName" id="recipientLastName" placeholder="Enter recipient last name">
+        </label><br>
+        <span id="error-recipient-lastName"></span>
+
+        <br>
+        <br>
+
+<!--        recipient phone -->
+        <label> Recipient phone
+            <input type="text" name="recipientPhone" id="recipientPhone" placeholder="Enter recipient phone">
+        </label><br>
+        <span id="error-recipient-phone"></span>
+
+        <br>
+        <br>
+
+        <label>Transport type
+            <select name="transportType" id="transportType">
+                <option value="">Select transport type </option>
+                <option value="Document">Document </option>
+                <option value="Non_Document">Non-document </option>
+            </select>
+        </label><br>
+        <span id="error-transport-type"></span>
+
+        <br>
+        <br>
+
+<!--        box weight -->
+        <label> Parcel post weight
+            <input type="number" name="parcelPostWeight" id="parcelPostWeight"  placeholder="Enter parcel post weight">
+        </label><br>
+        <span id="error-parcel-post-weight"></span>
+
+        <br>
+        <br>
+
+        <div id="non-document-transport-form">
+            <span id="fill-form-message"> # Fill in this form if you have chosen the type of non-document transport </span>
+
+            <br>
+            <br>
+
+<!--        box content -->
+            <label> Parcel post content:
+                <select name="parcelPostContent" id="parcelPostContent">
+                    <option value="">Select content </option>
+                    <option value="tool">Tool </option>
+                    <option value="clothing">Clothing </option>
+                    <option value="supermarket goods">Supermarket goods </option>
+                    <option value="toy">Toy </option>
+                    <option value="supermarket goods">Supermarket goods </option>
+                    <option value="beauty and health product">Beauty and health product </option>
+                    <option value="books and stationery">Books and stationery </option>
+                </select>
+            </label><br>
+            <span id="error-parcel-post-content"></span>
+
+            <br>
+            <br>
+
+<!--        box length -->
+            <label> Parcel post length
+                <input type="number" name="parcelPostLength" id="parcelPostLength" placeholder="Enter parcel post length">
+            </label><br>
+            <span id="error-parcel-post-length"></span>
+
+            <br>
+            <br>
+
+<!--        box width -->
+            <label> Parcel post width
+                <input type="number" name="parcelPostWidth" id="parcelPostWidth" placeholder="Enter parcel post width">
+            </label><br>
+            <span id="error-parcel-post-width"></span>
+
+            <br>
+            <br>
+
+<!--        box height -->
+            <label> Parcel post height
+                <input type="number" name="parcelPostHeight" id="parcelPostHeight" placeholder="Enter parcel post height">
+            </label><br>
+            <span id="error-parcel-post-height"></span>
+        </div>
+
+        <br>
+        <br>
+
+        <input type="submit" value="Get price">
+    </form>
+</div>
+</body>
+</html>
