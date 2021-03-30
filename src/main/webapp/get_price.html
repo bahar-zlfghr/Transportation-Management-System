@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Get Price</title>
+    <link rel="stylesheet" href="css/get_price.css">
+    <script src="js/get_price.js"></script>
+</head>
+<body>
+<div class="header">
+    Transportation Management System
+</div>
+
+<div id="welcome-message"></div>
+
+<div>
+    <h3># Please choose one option </h3>
+</div>
+
+<div class="form-group">
+    <form class="form" action="getPriceServlet" onsubmit="return validateResult()" method="post">
+        <label>
+            <input type="radio" id="premiumPrice" name="priceType" value="1">
+            Premium
+            <br>
+            <br>
+            <div id="premium">
+                <span id="premium-deliver-time"></span>
+                <br>
+                <br>
+                <span id="premium-post-price"></span>
+            </div>
+        </label><br>
+
+        <label>
+            <input type="radio" id="goldPrice" name="priceType" value="2">
+            Gold
+            <br>
+            <br>
+            <div id="gold">
+                <span id="gold-deliver-time"></span>
+                <br>
+                <br>
+                <span id="gold-post-price"></span>
+            </div>
+        </label><br>
+
+        <label>
+            <input type="radio" id="silverPrice" name="priceType" value="3">
+            Silver
+            <br>
+            <br>
+            <div id="silver">
+                <span id="silver-deliver-time"></span>
+                <br>
+                <br>
+                <span id="silver-post-price"></span>
+            </div>
+        </label><br>
+
+        <br>
+        <br>
+
+        <span id="error-not-choose-option"></span>
+
+        <br>
+        <br>
+
+        <div id="sum-statement"></div>
+
+        <label> Result of the above statement
+            <input type="number" name="result" id="result" placeholder="Enter result">
+        </label><br>
+        <span id="empty-error-result"></span>
+        <span id="error-incorrect-result"></span>
+
+        <br>
+        <br>
+
+        <input type="submit" value="Finalizing the order">
+    </form>
+</div>
+</body>
+</html>
